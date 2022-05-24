@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.SampleNavbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0059ff;
+  color: white;
+  padding: 10px;
+}
+.SampleNavbar .bar {
+  display: none;
+}
+.SampleNavbar .bar i {
+  font-size: 40px;
+  padding: 10px;
+}
+.SampleNavbar .brand a {
+  text-decoration: none;
+}
+.SampleNavbar .brand a img {
+  width: 200px;
+  height: 70px;
+}
+.SampleNavbar .brand a p {
+  font-size: 40px;
+  color: white;
+  padding: 10px;
+}
+.SampleNavbar .menu {
+  display: block;
+}
+.SampleNavbar .menu ul {
+  display: flex;
+  flex-direction: row;
+}
+.SampleNavbar .menu ul li {
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+}
+.SampleNavbar .menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.SampleNavbar .mobilMenu {
+  position: absolute;
+  background-color: #313131;
+  top: 0;
+  width: 70%;
+  height: 100%;
+  z-index: 999;
+  transition: 0.5s left;
+}
+.SampleNavbar .mobilMenu .closeIcon {
+  padding: 10px;
+  text-align: end;
+  border-bottom: 1px solid #c9c9c9;
+}
+.SampleNavbar .mobilMenu .closeIcon i {
+  font-size: 40px;
+}
+.SampleNavbar .mobilMenu ul {
+  display: flex;
+  flex-direction: column;
+}
+.SampleNavbar .mobilMenu ul li {
+  list-style: none;
+  padding: 10px;
+  margin: 5px;
+}
+.SampleNavbar .mobilMenu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 22px;
+}
+.SampleNavbar .show {
+  left: 0;
+}
+.SampleNavbar .hide {
+  left: -70%;
+}
+
+@media (max-width: 900px) {
+  .SampleNavbar .bar {
+    display: block;
+  }
+  .SampleNavbar .menu {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=reactNavbar.css.map */

@@ -1,0 +1,102 @@
+@import './vars';
+*{
+    margin: 0;
+    padding: 0;
+}
+.SampleNavbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $bg_color;
+    color: $primary_color;
+    padding: 10px;
+    .bar{
+        display: none;
+        i{
+            font-size: $icons_font_size_bar;
+            padding: 10px;
+        }
+    }
+    .brand{
+        a{
+            text-decoration: none;
+            img{
+                width: $brand_width;
+                height: $brand_height;
+            }
+            p{
+                font-size: 40px;
+                color: white;
+                padding: 10px;
+            }
+        }
+
+    }
+    .menu{
+        display: block;
+        ul{
+            display: flex;
+            flex-direction: row;
+            li{
+                list-style: none;
+                padding: 10px;
+                margin: 5px;
+                a{
+                    text-decoration: none;
+                    color: $primary_color;
+                    font-size: $font_size_menu;
+                }
+            }
+        }
+    }
+    .mobilMenu{
+        position: absolute;
+        background-color: $bg_color_mobile_menu;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        z-index: 999;
+        transition: $transition_left_menu left;
+
+        .closeIcon{
+            padding: 10px;
+            text-align: end;
+            border-bottom: 1px solid rgb(201, 201, 201);
+            i{
+                font-size: $icons_font_size_close;
+            }
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            li{
+                list-style: none;
+                padding: 10px;
+                margin: 5px;
+                a{
+                    text-decoration: none;
+                    color: $primary_color;
+                    font-size: $font_size_menu;
+                }
+            }
+        }
+    }
+    .show{
+        left: 0;
+    }
+    .hide{
+        left: -70%;
+    }
+}
+
+@media(max-width:900px){
+    .SampleNavbar{
+        .bar{
+            display: block;
+        }
+        .menu{
+            display: none;
+        }
+    }
+}
